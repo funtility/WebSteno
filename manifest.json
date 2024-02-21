@@ -1,0 +1,30 @@
+{
+   "manifest_version": 2,
+   "name": "Web Steno",
+   "version": "1.0",
+   "description": "Catalogue information from any web source. Create your own archive of web data.",
+   "permissions": ["activeTab", "windows", "background", "contextMenus", "storage", "tabs"],
+   "web_accessible_resources": [
+    "target-form.html",
+    "target-form.js",
+    "img/icon16.png"
+  ],
+   "browser_action": {
+    "default_icon": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    }
+   },
+   "background": {
+     "scripts": ["background.js","classes.js","dbContext.js"],
+     "persistent": true
+   },
+   "content_scripts": [
+     {
+       "matches": ["<all_urls>"],
+       "js": ["fnt-web-steno.js","classes.js"],
+       "css": ["fnt-web-steno.css"]
+     }
+   ]
+ }

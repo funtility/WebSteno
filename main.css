@@ -1,0 +1,31 @@
+.hidden {
+  display: none;
+}
+#menu-bar {
+  background-color: #f0f0f0;
+  border-top: 1px solid #d0d0d0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#file-menu-dropdown {
+  position: absolute;
+  background-color: #f0f0f0;
+  z-index: 1;
+}
+#file-menu-dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 3px 6px;
+  margin: 0;
+}
+button:hover {
+  background-color: #e0e0e0;
+}

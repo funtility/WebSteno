@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/icon16.png" />
+    <title>Web Steno</title>
+  </head>
+  <body>
+    <div id="loading" class="load-message">
+      <h1>Loading...</h1>
+    </div>
+    <div id="form" class="hidden">
+      <fieldset>
+        <legend>How do you want to target the site?</legend>
+        <div class="form-section inline">
+          <input type="checkbox" id="subDomainChkbx"></select>
+          <label for="subDomainChkbx">Subdomain</label>
+          <br />
+          <input type="text" id="subDomainInput" placeholder="Current site has no subdomain."></select>
+        </div>
+        <div class="form-section inline">
+          <input type="checkbox" id="domainChkbx"></select>
+          <label for="domainChkbx">Domain</label>
+          <br />
+          <input type="text" id="domainInput"></select>
+        </div>
+        <div class="form-section inline">
+          <input type="checkbox" id="routeChkbx"></select>
+          <label for="routeChkbx">Route</label>
+          <br />
+          <input type="text" id="routeInput" placeholder="Current page has default route."></select>
+        </div>
+        <div class="form-section" id="query-params"></div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>How do you want to target the element?</legend>
+        <div class="form-section inline">
+          <input type="checkbox" id="tagChkbx"></select>
+          <label for="tagChkbx">Tag</label>
+          <br />
+          <input type="text" id="tagInput"></select>
+        </div>
+        <div class="form-section inline">
+          <input type="checkbox" id="classesChkbx"></select>
+          <label for="classesChkbx" >Classes</label>
+          <br />
+          <input type="text" id="classesInput" placeholder="No classes found on the element you clicked."></select>
+        </div>
+        <div class="form-section inline">
+          <input type="checkbox" id="idChkbx"></select>
+          <label for="idChkbx">Id</label>
+          <br />
+          <input type="text" id="idInput" placeholder="No id found on the element you clicked."></select>
+        </div>
+        <div class="form-section inline">
+          <input type="checkbox" id="datasetChkbx"></select>
+          <label for="datasetChkbx">Dataset</label>
+          <br />
+          <input type="text" id="datasetInput" placeholder="No datasets found on the element you clicked."></select>
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>What information do you want to store?</legend>
+        <div class="form-section">
+          <input type="checkbox" id="innerTextChkbx"></select>
+          <label for="innerTextChkbx">Element's Inner Text</label>
+          <textarea id="innerTextTxtArea" rows="3"></textarea>
+        </div>
+      </fieldset>
+      <div class="submit">
+        <button id="submit">Submit</button>
+        <span id="response"></span>
+      </div>
+    </div>
+    <div id="error" class="load-message hidden">
+      <h1>ERROR: No data received.</h1>
+      <h2>Refresh the page and try again.</h2>
+  </body>
+  <script src="target-form.js"></script>
+</html>
+<style>
+  body {
+    font-size: 1rem;
+  }
+  .load-message {
+    text-align: center;
+    padding-top: 26%;
+    width: 100%;
+    color: #222222;
+  }
+  .hidden {
+    display: none;
+  }
+  .form-section {
+    margin-bottom: 12px;
+  }
+  input[type="text"] {
+    margin-left: 6px;
+    width: 98%;
+  }
+  .submit {
+    margin-top: 12px;
+    width: 100%;
+  }
+  button {
+    cursor: pointer;
+  }
+  #response {
+    text-align: center;
+    height: 24px;
+  }
+  .success {
+    color: #4a92e6;
+  }
+  .error {
+    color: #e64a4a;
+  }
+  #innerTextTxtArea {
+    word-wrap: normal;
+    width: 98%;
+    resize: none;
+    border: none;
+  }
+  .inline {
+    display: inline-flex;
+    width: 100%;
+  }
+</style>
